@@ -4,7 +4,7 @@ import Bio
 from Bio import SeqIO
 
 #for printing the sequence identifiers
-seq_file_path_foxp2 = "protein_seq_folder/foxp2.fasta" 
+seq_file_path_foxp2 = "protein_seq_folder/foxp2.fasta"
 seq_handle_foxp2 = SeqIO.parse(seq_file_path_foxp2, "fasta")
 
 for seq_record in seq_handle_foxp2:
