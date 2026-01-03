@@ -1,3 +1,4 @@
+#Assignment2
 ## Irmak Eda Aykan-Student1
 ###foxp2
 import Bio
@@ -42,6 +43,11 @@ count = SeqIO.convert(seq_file_path_hox, "fasta", "hox.genbank", "genbank")
 print ("Converted %i records" % count)
 
 
+
+
+
+
+
 ## Alperen Şen-Student2
 ###prion
 import Bio
@@ -58,6 +64,38 @@ for seq_record in seq_handle_prion:
 
 #for converting the files to the genbank format
 count = SeqIO.convert(seq_file_path_prion, "fasta", "prion.genbank", "genbank")
+print ("Converted %i records" % count)
+
+###insulin
+from Bio import SeqIO
+
+#for printing the sequence identifiers
+seq_file_path_insulin = "protein_seq_folder/insulin.fasta"
+seq_handle_insulin = SeqIO.parse(seq_file_path_insulin, "fasta")
+
+for seq_record in seq_handle_insulin:
+    print (seq_record.id)
+    print (repr(seq_record.seq))
+    print (len(seq_record))
+
+#for converting the files to the genbank format
+count = SeqIO.convert(seq_file_path_insulin, "fasta", "prion.genbank", "genbank")
+print ("Converted %i records" % count)
+
+###albumin
+from Bio import SeqIO
+
+#for printing the sequence identifiers
+seq_file_path_albumin = "protein_seq_folder/albumin.fasta"
+seq_handle_albumin = SeqIO.parse(seq_file_path_albumin, "fasta")
+
+for seq_record in seq_handle_albumin:
+    print (seq_record.id)
+    print (repr(seq_record.seq))
+    print (len(seq_record))
+
+#for converting the files to the genbank format
+count = SeqIO.convert(seq_file_path_albumin, "fasta", "prion.genbank", "genbank")
 print ("Converted %i records" % count)
 
 
